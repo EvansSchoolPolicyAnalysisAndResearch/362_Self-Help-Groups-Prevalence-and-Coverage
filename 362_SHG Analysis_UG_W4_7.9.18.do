@@ -23,24 +23,27 @@
 
 *Summary of executing the Master do.file
 *-----------
-*This master do file constructs selected indicators using the Kenya FinAccess data set.
+*This master do file constructs selected indicators using the Uganda FinScope data set.
 *Using a data file from within the "Raw Data" folder within the "FinScope" folder, 
 *the do-file constructs relevant indicators related to Self-Help Group coverage
 *and Use and saves final dta files with all created variables and indicators
-*in the "Created Data" folder within the "FII" folder.
-*Additionally, the do-file creates Excel spreadsheet with estimates of coverage 
+*in the "Created Data" folder within the "FinScope" folder.
+*Additionally, the do-file creates Excel spreadsheet with estimsates of coverage 
 *and characteristic indicators disaggregated by gender, mobile phone access,
 *bank account access, urban vs. rural, possession of official identification,
 *poverty level, and mobile money use.
-*These estimates are saved in the "Outputs" folder with in the "FII" folder.
-
+*These estimates are saved in the "Outputs" folder with in the "FinScope" folder.
 *Throughought the do-file we refer to "Self-Help Groups" as "SHGs".
+
+*The following refer to running this Master do.file with EPAR's cleaned data files. Information on EPAR's cleaning and construction decisions is available in the 
+*"EPAR_UW_362_SHG_Indicator_CrossComparisons" spreadsheet. 
 
 clear
 set more off
 
 //Set directories
-*These paths correspond to the folders where the raw data files are located and where the created data and final data will be stored.
+*Uganda FinScope Wave 4
+
 global UG_Finscope_data 								"FinScope/Raw Data"
 global created_data 									"FinScope/Created Data"
 global final_data 										"FinScope/Outputs"
